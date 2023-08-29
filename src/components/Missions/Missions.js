@@ -1,14 +1,14 @@
-import { useEffect } from "react";
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMissions, reserve } from "../../redux/missions/missionSlice";
+import { getMissions, reserve } from '../../redux/missions/missionSlice';
 
 const Missions = () => {
-  const { missions, isLoading, error } = useSelector((state) => state.missions)
+  const { missions, isLoading, error } = useSelector((state) => state.missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getMissions());
-  }, [dispatch])
+  }, [dispatch]);
 
   return (
     <div className="missions">
@@ -31,7 +31,7 @@ const Missions = () => {
                 <td>{mission.description}</td>
                 <td>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</td>
                 <td>
-                  <button type="button" onClick={()=> dispatch(reserve(mission.mission_id))}>
+                  <button type="button" onClick={() => dispatch(reserve(mission.mission_id))}>
                     {mission.reserved ? 'Leave Mission' : 'Join Mission'}
                   </button>
                 </td>
@@ -41,7 +41,7 @@ const Missions = () => {
         </table>
       )}
     </div>
-  )
+  );
 };
 
 export default Missions;
