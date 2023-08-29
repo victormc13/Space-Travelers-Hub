@@ -1,4 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+
+const url = 'https://api.spacexdata.com/v3/missions';
+
+export const getMissions = createAsyncThunk('missions/getMission', async (thunkAPI) => {
+  try {
+    const resp = await fetch(url);
+    const data = await resp.json();
+    return data;
+  } catch (error) {
+    return thunkAPI.rejectWithValue({ message: error.message });
+  }
+});
 
 const initialState = {
   missions: [],
