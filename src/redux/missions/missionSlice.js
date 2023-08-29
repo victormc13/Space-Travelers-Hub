@@ -19,4 +19,6 @@ const missionSlice = createSlice({
   },
 });
 
+export const { reserve } = missionSlice.actions;
+
 export default missionSlice.reducer;
