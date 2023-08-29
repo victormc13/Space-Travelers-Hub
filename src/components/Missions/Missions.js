@@ -1,7 +1,42 @@
-import React from 'react';
+import { useEffect } from "react";
+import { useSelector, useDispatch } from 'react-redux';
+import { getMissions, reserve } from "../../redux/missions/missionSlice";
 
-const Missions = () => (
-  <div>Missions</div>
-);
+const Missions = () => {
+  const { missions, isLoading, error } = useSelector((state) => state.missions)
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getMissions());
+  }, [dispatch])
+
+  return (
+    <div className="missions">
+      {isLoading && <div>Loading...</div>}
+      {error && <div>Sorry, something went wrong.</div>}
+      {missions && (
+        <table>
+          <thead>
+            <tr>
+              <th>Mission</th>
+              <th>Description</th>
+              <th>Status</th>
+              <th>{' '}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {missions.map((mission) => (
+              <tr key={mission.mission_id}>
+                <td>{mission.mission_id}</td>
+                <td>{mission.mission_name}</td>
+                <td>{mission.description}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+    </div>
+  )
+};
 
 export default Missions;
