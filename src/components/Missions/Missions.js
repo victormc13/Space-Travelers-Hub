@@ -1,5 +1,9 @@
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import Table from 'react-bootstrap/Table';
+import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
+import './Missions.modules.css';
 import { getMissions, reserve } from '../../redux/missions/missionSlice';
 
 const Missions = () => {
@@ -15,13 +19,15 @@ const Missions = () => {
       {isLoading && <div>Loading...</div>}
       {error && <div>Sorry, something went wrong.</div>}
       {missions && (
-        <table>
+        <Table striped bordered hover>
           <thead>
             <tr>
-              <th>Mission</th>
+              <th color="black">Mission</th>
               <th>Description</th>
               <th>Status</th>
-              <th>{' '}</th>
+              <th style={{ width: '150px' }}>
+                {' '}
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -29,16 +35,26 @@ const Missions = () => {
               <tr key={mission.mission_id}>
                 <td>{mission.mission_name}</td>
                 <td>{mission.description}</td>
-                <td>{mission.reserved ? 'Active Member' : 'NOT A MEMBER'}</td>
-                <td>
-                  <button type="button" onClick={() => dispatch(reserve(mission.mission_id))}>
+                <td className="badge-container">
+                  <Badge
+                    bg={mission.reserved ? 'info' : 'secondary'}
+                  >
+                    {mission.reserved ? 'Active Member' : 'NOT A MEMBER'}
+                  </Badge>
+                </td>
+                <td className="button-container">
+                  <Button
+                    type="button"
+                    variant={mission.reserved ? 'outline-danger' : 'outline-secondary'}
+                    onClick={() => dispatch(reserve(mission.mission_id))}
+                  >
                     {mission.reserved ? 'Leave Mission' : 'Join Mission'}
-                  </button>
+                  </Button>
                 </td>
               </tr>
             ))}
           </tbody>
-        </table>
+        </Table>
       )}
     </div>
   );
