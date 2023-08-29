@@ -1,0 +1,10 @@
+.badge-container,
+.button-container {
+  text-align: center;
+  vertical-align: middle;
+  height: 100px;
+}
+
+.button-container button {
+  white-space: nowrap;
+}

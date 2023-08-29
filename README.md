@@ -3,7 +3,7 @@
   <img src="./banner.webp" alt="logo" />
   <br/>
 
-  <h1><b>Bookstore</b></h1>
+  <h1><b>Space-Travelers-Hub</b></h1>
 
 </div>
 
@@ -12,7 +12,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 \[Bookstore\] ](#-bookstore-)
+- [📖 \[Space-Travelers-Hub\] ](#-space-travelers-hub-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -30,11 +30,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Bookstore] <a name="about-project"></a>
+# 📖 [Space-Travelers-Hub] <a name="about-project"></a>
 
 <!-- > Describe your project in 1 or 2 sentences. -->
 
-**[Bookstore]** an interactive web application designed to help book enthusiasts discover their next literary adventure. This project showcases the seamless integration of React and Redux, two powerful technologies in the world of modern web development.
+**[Space-Travelers-Hub]** is a dynamic web application developed for a pioneering space travel company that offers both commercial and scientific cosmic voyages using real-time data from the SpaceX API where users can seamlessly book rockets, engage in captivating space missions, and personalize their journey through the My Profile section.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -85,7 +85,7 @@
 
 <!-- > Add a link to your deployed project. -->
 
-<!-- - [Bookstore](https://victormc13.github.io/Bookstore/) -->
+<!-- - [Space-Travelers-Hub](https://victormc13.github.io/Space-Travelers-Hub/) -->
 
 <!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
@@ -120,7 +120,7 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/victormc13/Bookstore.git
+  git clone https://github.com/victormc13/Space-Travelers-Hub.git
 ```
 
 
@@ -211,7 +211,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/victormc13/Bookstore/issues).
+Feel free to check the [issues page](https://github.com/victormc13/Space-Travelers-Hub/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
