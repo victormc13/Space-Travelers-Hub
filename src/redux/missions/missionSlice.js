@@ -29,6 +29,20 @@ const missionSlice = createSlice({
       ))
     }
   },
+  extraReducers: (builder) => {
+    builder
+    .addCase(getMissions.pending, (state) => {
+      state.isLoading = true;
+    })
+    .addCase(getMissions.fulfilled, (state, action) => {
+      state.isLoading = false;
+      state.missions = action.payload;
+    })
+    .addCase(getMissions.rejected, (state, action) => {
+      state.isLoading = false;
+      state.error = action.payload;
+    })
+  }
 });
 
 export const { reserve } = missionSlice.actions;
