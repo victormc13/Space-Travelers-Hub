@@ -9,7 +9,7 @@ const Navigation = () => (
       <nav className="navigation">
         <div className="logo">
           <img className="img" src={logo} alt="logo" />
-          <span>Space Travelers Hub</span>
+          <h1>Space Travelers&apos; Hub</h1>
         </div>
         <ul className="nav-List">
           <li className="nav-item">
