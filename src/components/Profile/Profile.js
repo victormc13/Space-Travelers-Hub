@@ -1,18 +1,9 @@
-import { useEffect } from 'react';
 import './Profile.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets } from '../../redux/rockets/rocketsSlice';
+import { useSelector } from 'react-redux';
 
 function Profile() {
-  const dispatch = useDispatch();
-  const { rockets, status } = useSelector((state) => state.rockets);
+  const { rockets } = useSelector((state) => state.rockets);
   const { missions } = useSelector((state) => state.missions);
-
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchRockets());
-    }
-  }, [status, dispatch]);
 
   return (
     <div className="profile-section">
@@ -32,12 +23,10 @@ function Profile() {
         <h2>My Rockets</h2>
         <table>
           <tbody>
-            {rockets.map((rocket) => (
-              rocket.reserved && (
-                <tr key={rocket.id}>
-                  <td>{rocket.name}</td>
-                </tr>
-              )
+            {rockets.filter((rocket) => rocket.reserved).map((rocket) => (
+              <tr key={rocket.id}>
+                <td>{rocket.name}</td>
+              </tr>
             ))}
           </tbody>
         </table>
