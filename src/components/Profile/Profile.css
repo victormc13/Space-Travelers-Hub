@@ -1,10 +1,21 @@
 table {
   border-collapse: collapse;
-  width: 30%;
+  width: 100%;
   margin-top: 1rem;
 }
 
 table td {
   border: 1px solid #ddd;
   padding: 1rem;
+}
+
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.missions-section,
+.rockets-section {
+  width: 50%;
 }
