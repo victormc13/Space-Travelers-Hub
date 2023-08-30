@@ -11,8 +11,9 @@ const Missions = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if (missions.length > 0) return;
     dispatch(getMissions());
-  }, [dispatch]);
+  }, [missions, dispatch]);
 
   return (
     <div className="missions">
