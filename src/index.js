@@ -7,9 +7,6 @@ import store from './redux/store';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import counterReducer from './counter/counterSlice';
-import userReducer from './user/userSlice';
-import { configureStore } from '@reduxjs/toolkit';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,13 +18,5 @@ root.render(
     </BrowserRouter>
   </React.StrictMode>,
 );
-
-const store = configureStore({
-  reducer: {
-    counter: counterReducer,
-    user: userReducer,
-    // Add other reducers here...
-  },
-});
 
 reportWebVitals();
