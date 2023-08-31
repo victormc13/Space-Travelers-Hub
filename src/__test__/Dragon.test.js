@@ -1,5 +1,5 @@
 import React from 'react';
-import Dragon from './Dragon';
+import Dragon from '../components/Dragons/Dragon';
 
 const { render, fireEvent } = require('@testing-library/react');
 
