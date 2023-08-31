@@ -8,7 +8,6 @@ import Dragons from './components/Dragons/Dragons';
 import Profile from './components/Profile/Profile';
 
 const App = () => (
-
   <>
     <Navigation />
     <div className="container">

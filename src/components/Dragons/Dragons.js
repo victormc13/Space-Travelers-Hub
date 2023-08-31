@@ -1,27 +1,33 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import DragonCard from './DragonCard';
+import React, { useEffect } from 'react';
+import './Dragons.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchDragons, reserve } from 'src/redux/dragons/dragonsSlice';
+import Dragon from './Dragon';
 
-const Dragons = () => {
-  const state = useSelector((state) => state.dragonSlice);
+function Dragons() {
+  const dispatch = useDispatch();
+  const { dragons, status } = useSelector((state) => state.dragons);
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchDragons());
+    }
+  }, [status, dispatch]);
 
   return (
-    <>
-      <div>
-        {state.map((dragon) => (
-          <DragonCard
+    <div className="dragons-container">
+      {status === 'loading' && <div>Loading...</div>}
+      {status === 'failed' && <div>Error: Something went wrong</div>}
+      {status === 'succeeded'
+        && dragons.map((dragon) => (
+          <Dragon
             key={dragon.id}
-            id={dragon.id}
-            name={dragon.name}
-            src={dragon.img}
-            type={dragon.type}
-            value={dragon.value}
+            rocket={dragon}
+            onReserve={(dragonId) => dispatch(reserve(dragonId))}
           />
         ))}
-
-      </div>
-    </>
+    </div>
   );
-};
+}
 
 export default Dragons;
