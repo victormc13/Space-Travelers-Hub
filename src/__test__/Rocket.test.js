@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
-import Rocket from './Rocket';
+import Rocket from '../components/Rockets/Rocket';
 
 test('Rocket component renders correctly', () => {
   const rocket = {
