@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Navigation from './Navigation';
+import Navigation from '../components/Navigation/Navigation';
 
 test('Navigation component renders correctly', () => {
   render(
