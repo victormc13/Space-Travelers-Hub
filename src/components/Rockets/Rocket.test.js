@@ -1,7 +1,6 @@
 import React from 'react';
 import Rocket from './Rocket';
-
-const { render, fireEvent } = require('@testing-library/react');
+import { render, fireEvent } from '@testing-library/react'
 
 test('Rocket component renders correctly', () => {
   const rocket = {
