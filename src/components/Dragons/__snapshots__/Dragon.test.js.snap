@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dragon component renders correctly 1`] = `
+<div>
+  <div
+    class="dragon"
+  >
+    <img
+      alt="Falcon 9"
+      class="dragon-img"
+      src="image-url"
+    />
+    <div
+      class="dragon-detail"
+    >
+      <h2>
+        Falcon 9
+      </h2>
+      <p>
+        <span
+          class="badge"
+          style="padding: 0px;"
+        />
+        Sample dragon description
+      </p>
+      <button
+        class="btn-reservation"
+        style="background: rgb(0, 123, 255);"
+        type="button"
+      >
+        Reserve dragon
+      </button>
+    </div>
+  </div>
+</div>
+`;

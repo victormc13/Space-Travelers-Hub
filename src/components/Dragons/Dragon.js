@@ -1,40 +1,40 @@
 import PropTypes from 'prop-types';
 
-function Rocket({ rocket, onReserve }) {
-  const badgeStyle = rocket.reserved
+function Dragon({ dragon, onReserve }) {
+  const badgeStyle = dragon.reserved
     ? { padding: '2px 10px' }
     : { padding: '0' };
 
-  const buttonStyle = rocket.reserved
+  const buttonStyle = dragon.reserved
     ? { background: '#fff', color: '#000' }
     : { background: '#007bff', border: 'none' };
 
   return (
-    <div className="rocket">
-      <img src={rocket.flickr_images[0]} alt={rocket.name} className="rocket-img" />
-      <div className="rocket-detail">
-        <h2>{rocket.name}</h2>
+    <div className="dragon">
+      <img src={dragon.flickr_images[0]} alt={dragon.name} className="dragon-img" />
+      <div className="dragon-detail">
+        <h2>{dragon.name}</h2>
         <p>
           <span style={badgeStyle} className="badge">
-            {rocket.reserved ? 'Reserved' : ''}
+            {dragon.reserved ? 'Reserved' : ''}
           </span>
-          {rocket.description}
+          {dragon.description}
         </p>
         <button
           style={buttonStyle}
           className="btn-reservation"
           type="button"
-          onClick={() => onReserve(rocket.id)}
+          onClick={() => onReserve(dragon.id)}
         >
-          {rocket.reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+          {dragon.reserved ? 'Cancel Reservation' : 'Reserve dragon'}
         </button>
       </div>
     </div>
   );
 }
 
-Rocket.propTypes = {
-  rocket: PropTypes.shape({
+Dragon.propTypes = {
+  dragon: PropTypes.shape({
     id: PropTypes.string.isRequired,
     flickr_images: PropTypes.arrayOf(PropTypes.string).isRequired,
     name: PropTypes.string.isRequired,
@@ -44,4 +44,4 @@ Rocket.propTypes = {
   onReserve: PropTypes.func.isRequired,
 };
 
-export default Rocket;
+export default Dragon;

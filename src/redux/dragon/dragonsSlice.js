@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
 
-export const fetchDragons = createAsyncThunk('dragons/fetchDragons', async () => {
+export const fetchDragons = createAsyncThunk('Dragons/fetchDragons', async () => {
   try {
-    const response = await axios.get('https://api.spacexdata.com/v4/dragons');
-    return response.data;
+    const response = await fetch('https://api.spacexdata.com/v4/dragons');
+    const data = await response.json();
+    return data;
   } catch (error) {
-    throw Error('Failed to fetch dragon data');
+    throw Error('Failed to fetch dragons data');
   }
 });
 
@@ -16,7 +16,7 @@ const initialState = {
   error: null,
 };
 
-const rocketSlice = createSlice({
+const dragonSlice = createSlice({
   name: 'dragons',
   initialState,
   reducers: {
@@ -46,5 +46,5 @@ const rocketSlice = createSlice({
       });
   },
 });
-export const { reserve } = rocketSlice.actions;
-export default rocketSlice.reducer;
+export const { reserve } = dragonSlice.actions;
+export default dragonSlice.reducer;

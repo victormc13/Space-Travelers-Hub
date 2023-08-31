@@ -1,4 +1,4 @@
-.rockets-container {
+.dragons-container {
   display: grid;
   gap: 2rem;
 }
@@ -16,8 +16,8 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: start;
+  align-items: start;
 }
 
 .dragon-detail h2 {

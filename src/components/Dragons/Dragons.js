@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import './Dragons.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchDragons, reserve } from 'src/redux/dragons/dragonsSlice';
+import { fetchDragons, reserve } from '../../redux/dragon/dragonsSlice';
 import Dragon from './Dragon';
 
 function Dragons() {
@@ -22,7 +22,7 @@ function Dragons() {
         && dragons.map((dragon) => (
           <Dragon
             key={dragon.id}
-            rocket={dragon}
+            dragon={dragon}
             onReserve={(dragonId) => dispatch(reserve(dragonId))}
           />
         ))}
