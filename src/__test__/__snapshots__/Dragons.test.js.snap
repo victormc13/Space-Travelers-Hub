@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dragons component renders correctly 1`] = `
+<div>
+  <div
+    class="dragons-container"
+  >
+    <div>
+      Loading...
+    </div>
+  </div>
+</div>
+`;
