@@ -191,6 +191,17 @@ Example:
 - Twitter: [@VctorMC20](https://twitter.com/VctorMC20)
 - LinkedIn: [Victor MC](https://www.linkedin.com/in/victormc13/)
 
+👤 **AHMIDOU EL MEHDI**
+
+- GitHub: [@ahmidou09](https://github.com/ahmidou09)
+- Twitter: [@el_ahmidou](https://twitter.com/el_ahmidou)
+- LinkedIn: [el mehdi ahmidou](https://www.linkedin.com/in/el-mehdi-ahmidou-312590125/)
+
+👤 **Derek Akrasi Konadu**
+
+- GitHub: [@githubhandle](https://obibaadoma.github.io/potfolio-desktop/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/iderek-akrasi-konadu-187453151/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
