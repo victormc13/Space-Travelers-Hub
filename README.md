@@ -16,6 +16,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🚀 Live Demo](#live-demo)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -79,15 +80,10 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+## 🚀 Live Demo <a name="live-demo"></a>
 
-<!-- ## 🚀 Live Demo <a name="live-demo"></a> -->
+- [Live Demo Link](https://space-travelers-hub-2.onrender.com/)
 
-<!-- > Add a link to your deployed project. -->
-
-<!-- - [Space-Travelers-Hub](https://victormc13.github.io/Space-Travelers-Hub/) -->
-
-<!-- <p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- GETTING STARTED -->
 
