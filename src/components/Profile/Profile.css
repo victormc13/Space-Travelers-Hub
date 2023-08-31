@@ -15,7 +15,6 @@ table td {
   gap: 2rem;
 }
 
-.missions-section,
-.rockets-section {
-  width: 50%;
+.profile-list {
+  width: 33.33%;
 }
