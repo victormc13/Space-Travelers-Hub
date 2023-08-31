@@ -6,7 +6,7 @@ exports[`Profile component renders correctly 1`] = `
     class="profile-section"
   >
     <div
-      class="missions-section"
+      class="profile-list"
     >
       <h2>
         My Missions
@@ -16,10 +16,20 @@ exports[`Profile component renders correctly 1`] = `
       </table>
     </div>
     <div
-      class="rockets-section"
+      class="profile-list"
     >
       <h2>
         My Rockets
+      </h2>
+      <table>
+        <tbody />
+      </table>
+    </div>
+    <div
+      class="profile-list"
+    >
+      <h2>
+        My Dragons
       </h2>
       <table>
         <tbody />
